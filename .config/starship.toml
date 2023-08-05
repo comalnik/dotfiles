@@ -1,0 +1,74 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+palette = "nord"
+
+format = """
+[ ](bg:frost2)\
+$username\
+[](bg:pn3 fg:frost2)\
+$directory\
+[](fg:pn3 bg:aurora5)\
+$git_branch\
+$git_status\
+[](fg:aurora5 bg:frost2)\
+$python\
+$c\
+$character
+"""
+
+
+[username]
+show_always = true
+style_user = "bg:frost2 fg:pn1 bold"
+style_root = "bg:aurora1 fg:pn1 bold"
+format = '[$user]($style)'
+disabled = false
+
+[directory]
+style = "bg:pn3 fg:ss1 bold"
+format = "[ $path ]($style)"
+truncation_length = 1
+
+[c]
+symbol = " "
+style = "bg:frost2 fg:pn1 bold"
+format = '[ $symbol($version) ]($style)'
+
+
+[git_branch]
+symbol = " "
+style = "bg:aurora5 fg:pn1 bold"
+format = '[ $symbol$branch ]($style)'
+
+[git_status]
+style = "bg:aurora5 fg:pn1 bold"
+format = '[$all_status$ahead_behind]($style)'
+
+[python]
+symbol = " "
+style = "bg:frost2 fg:pn1 bold"
+format = '[ $symbol($version) ]($style)'
+
+
+[character]
+success_symbol = "[](fg:frost2 bg:frost4)[ ](frost4)"
+error_symbol = "[](fg:frost2 bg:aurora1)[ ](aurora1)"
+
+
+[palettes.nord]
+pn1 = "#2E3440"
+pn2 = "#3B4252"
+pn3 = "#434C5E"
+pn4 = "#4C566A"
+ss1 = "#D8DEE9"
+ss2 = "#E5E9F0"
+ss3 = "#ECEFF4"
+frost1 = "#8FBCBB"
+frost2 = "#88C0D0"
+frost3 = "#81A1C1"
+frost4 = "#5E81AC"
+aurora1 = "#BF616A"
+aurora2 = "#D08770"
+aurora3 = "#EBCB8B"
+aurora4 = "#A3BE8C"
+aurora5 = "#B48EAD"

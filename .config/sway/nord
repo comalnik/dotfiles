@@ -1,0 +1,19 @@
+set $aurora1 #bf616a
+set $aurora2 #d08770
+set $aurora3 #ebcb8b
+set $aurora4 #a3be8c
+set $aurora5 #b48ead
+
+set $frost1 #8fbcbb
+set $frost2 #88c0d0
+set $frost3 #81a1c1
+set $frost4 #5e81ac
+
+set $pn1 #2e3440
+set $pn2 #3b4252
+set $pn3 #434c5e
+set $pn4 #4c566a
+
+set $ss1 #d8dee9
+set $ss2 #e5e9f0
+set $ss3 #eceff4

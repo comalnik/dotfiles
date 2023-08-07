@@ -47,7 +47,7 @@ format = '[$all_status$ahead_behind]($style)'
 [python]
 symbol = " "
 style = "bg:frost2 fg:pn1 bold"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol($version) ($virtualenv)]($style)'
 
 
 [character]

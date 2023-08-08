@@ -116,7 +116,7 @@ button:hover {
 #clock {
     color: @ss1;
     border-radius: 2rem 2rem 2rem 2rem;
-    margin-right:6px;
+    margin-right:3px;
     margin-left:3px;
 }
 

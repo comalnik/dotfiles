@@ -1,0 +1,30 @@
+* {
+    background:     #2E3440;
+    background-alt: #3B4252;
+    foreground:     #D8DEE9;
+    selected:       #81A1C1;
+    active:         #A3BE8C;
+    urgent:         #BF616A;
+
+    pn1:    #2E3440;
+    pn2:    #3B4252;
+    pn3:    #434C5E;
+    pn4:    #4C566A;
+
+    ss1:    #D8DEE9;
+    ss2:    #E5E9F0;
+    ss3:    #ECEFF4;
+
+    frost1: #8FBCBB;
+    frost2: #88C0D0;
+    frost3: #81A1C1;
+    frost4: #5E81AC;
+
+    aurora1:    #BF616A;
+    aurora2:    #D08770;
+    aurora3:    #EBCB8B;
+    aurora4:    #A3BE8C;
+    aurora5:    #B48EAD;
+
+
+}

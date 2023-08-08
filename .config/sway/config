@@ -21,10 +21,10 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu "rofi -combi-modi window,drun,ssh,run -show combi -show-icons"
+set $menu "rofi -show drun"
 
 # Wallpaper
-output * bg /home/luka/wallpapers/nord.jpg fill
+output * bg $HOME/wallpapers/0002.jpg fill
 
 # Display config
 
@@ -44,7 +44,7 @@ output DP-2 resolution 2560x1440 scale 1 position 1920,0
 
 
 
-bindsym $mod+i exec swaylock -e -f -i /home/luka/wallpapers/nord.jpg
+bindsym $mod+i exec swaylock -e -f -i $HOME/wallpapers/0002.jpg
 
 
 
@@ -195,7 +195,7 @@ bar {
 
 #bindsym $mod+d exec --no-startup-id rofi -show drun
 #bindsym $mod+x exec --no-startup-id rofi -show run
-#bindsym $mod+p exec --no-startup-id rofi -show power-menu -modi power-menu:rofi-power-menu
+bindsym $mod+p exec $HOME/.config/rofi/scripts/rofi_powermenu
 #bindsym $mod+c exec --no-startup-id rofi -show calc
 #bindsym $mod+i exec --no-startup-id bash rofi-pass
 

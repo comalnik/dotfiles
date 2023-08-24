@@ -1,0 +1,16 @@
+set $dark1 #21141d
+set $dark2 #2e1b15
+set $dark3 #3c3030
+set $dark4 #080808
+set $light1 #9a6d56
+set $light2 #ab9583
+
+set $text1 #e1d5d5
+set $text2 #f7e2cd
+
+set $red #cc9189
+set $green1 #666d4b
+set $green2 #353e2b
+set $blue #cee1f1
+set $violet #857b93
+

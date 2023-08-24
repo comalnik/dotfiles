@@ -1,0 +1,141 @@
+
+env:
+
+  TERM: alacritty
+  SHELL: /bin/zsh
+
+
+themes:
+
+  Academia: &Academia
+    primary:
+      background: '#080808'
+      foreground: '#e1d5d5'
+      dim_foreground: '#f7e2cd'
+    cursor:
+      text: '#080808'
+      cursor: '#e1d5d5'
+    vi_mode_cursor:
+      text: '#080808'
+      cursor: '#e1d5d5'
+    selection:
+      text: CellForeground
+      background: '#3c3030'
+    search:
+      matches:
+        foreground: CellBackground
+        background: '#f7e2cd'
+      colors:
+        footer_bar:
+          background: '#2e1b15'
+          foreground: '#e1d5d5'
+    normal:
+      black: '#080808'
+      red: '#cc9189'
+      green: '#666d4b'
+      yellow: '#f7e2cd'
+      blue: '#9a6d56'
+      magenta: '#857b93'
+      cyan: '#ab9583'
+      white: '#e1d5d5'
+    bright:
+      black: '#21141d'
+      red: '#cc9189'
+      green: '#666d4b'
+      yellow: '#f7e2cd'
+      blue: '#9a6d56'
+      magenta: '#857b93'
+      cyan: '#ab9583'
+      white: '#e1d5d5'
+    dim:
+      black: '#21141d'
+      red: '#cc9189'
+      green: '#666d4b'
+      yellow: '#f7e2cd'
+      blue: '#9a6d56'
+      magenta: '#857b93'
+      cyan: '#ab9583'
+      white: '#e1d5d5'
+
+
+
+
+colors: *Academia
+
+fonts:
+
+  Iosevka: &Iosevka
+
+    size: 10.5
+
+    normal:
+      family: Iosevka Nerd Font
+      style: Normal
+
+    bold:
+      family: Iosevka Nerd Font
+      style: Bold
+
+    italic:
+      family: Iosevka Nerd Font
+      style: Italic
+
+    bold_italic:
+      family: Iosevka Nerd Font
+      style: Bold Italic
+
+  JetBrains: &JetBrains
+    size: 9.5
+
+    offset:
+      x: 1
+
+    normal:
+      family: JetBrainsMono Nerd Font
+      style: Medium
+
+    bold:
+      family: JetBrainsMono Nerd Font
+      style: Bold
+
+    italic:
+      family: JetBrainsMono Nerd Font
+      style: Italic
+
+    bold_italic:
+      family: JetBrainsMono Nerd Font
+      style: Bold Italic
+
+Maple: &Maple
+    size: 10
+
+    offset:
+      x: 1
+
+    normal:
+      family: Maple Mono NF
+      style: Medium
+
+    bold:
+      family: Maple Mono NF
+      style: Bold
+
+    italic:
+      family: Maple Mono NF
+      style: Italic
+
+    bold_italic:
+      family: Maple Mono NF
+      style: Bold Italic
+
+
+
+
+font: *Maple
+
+draw_bold_text_with_bright_colors: false
+
+
+
+
+

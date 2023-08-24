@@ -1,0 +1,90 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+palette = "academia"
+
+format = """
+[ ](bg:light1)\
+$username\
+[](bg:light2 fg:light1)\
+$directory\
+[](fg:light2 bg:violet)\
+$git_branch\
+$git_status\
+[](fg:violet bg:light1)\
+$python\
+$c\
+$character
+"""
+
+
+[username]
+show_always = true
+style_user = "bg:light1 fg:text1 bold"
+style_root = "bg:red fg:text1 bold"
+format = '[$user]($style)'
+disabled = false
+
+[directory]
+style = "bg:light2 fg:dark1 bold"
+format = "[ $path ]($style)"
+truncation_length = 1
+
+[c]
+symbol = " "
+style = "bg:light1 fg:text1 bold"
+format = '[ $symbol($version) ]($style)'
+
+
+[git_branch]
+symbol = " "
+style = "bg:violet fg:text1 bold"
+format = '[ $symbol$branch ]($style)'
+
+[git_status]
+style = "bg:violet fg:text1 bold"
+format = '[$all_status$ahead_behind]($style)'
+
+[python]
+symbol = " "
+style = "bg:light1 fg:text1 bold"
+format = '[ $symbol($version) ($virtualenv)]($style)'
+
+
+[character]
+success_symbol = "[](fg:light1 bg:green1)[ ](green1)"
+error_symbol = "[](fg:light1 bg:red)[ ](red)"
+
+
+[palettes.nord]
+text1 = "#2E3440"
+pn2 = "#3B4252"
+light2 = "#434C5E"
+pn4 = "#4C566A"
+ss1 = "#D8DEE9"
+ss2 = "#E5E9F0"
+ss3 = "#ECEFF4"
+frost1 = "#8FBCBB"
+light1 = "#88C0D0"
+frost3 = "#81A1C1"
+green = "#5E81AC"
+red = "#BF616A"
+aurora2 = "#D08770"
+aurora3 = "#EBCB8B"
+aurora4 = "#A3BE8C"
+violet = "#B48EAD"
+
+
+[palettes.academia]
+dark1 = "#21141d"
+dark2 = "#2e1b15"
+dark4 = "#080808"
+dark3 = "#3c3030"
+light1 = "#9a6d56"
+light2 = "#ab9583"
+text1 = "#e1d5d5"
+text2 = "#f7e2cd"
+red = "#cc9189"
+green1 = "#666d4b"
+green2 = "#353e2b"
+blue = "#cee1f1"
+violet = "#857b93"

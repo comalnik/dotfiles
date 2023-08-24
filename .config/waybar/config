@@ -5,7 +5,7 @@
     "output": "DP-2",
     "modules-left": ["sway/workspaces", "sway/language", "sway/mode", "sway/scratchpad", "keyboard-state"],
     "modules-center": ["sway/window"],
-    "modules-right": ["temperature" ,"pulseaudio", "custom/updates", "disk", "cpu", "memory", "battery", "clock", ],
+    "modules-right": ["pulseaudio", "custom/updates", "disk", "cpu", "memory", "clock", ],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -100,21 +100,24 @@
         "format": "󰶼 {}",
         "exec": "checkupdates | wc -l",
         "restart-interval": 900,
-        "on-click": "alacritty -e yay -Syyu"
+        "on-click": "alacritty -e yay -Syyu",
+        "tooltip": false
     },
 
     "disk": {
         "path": "/",
         "format": " {percentage_free}%",
         "on-click": "alacritty -e sudo pacman -Scc",
-        "interval": 300
+        "interval": 300,
+        "tooltip": false
     },
 
 
 
     "keyboard-state": {
         "capslock": true,
-        "format": "{name}"
+        "format": "{name}",
+        "tooltip": false
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -123,7 +126,7 @@
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],
-        "tooltip": true,
+        "tooltip": false,
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
@@ -174,7 +177,8 @@
         "tooltip": false
     },
     "memory": {
-        "format": " {}%"
+        "format": " {}%",
+        "tooltip": false
     },
     "temperature": {
         // "thermal-zone": 2,

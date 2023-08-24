@@ -39,7 +39,7 @@ themes:
       cyan: '#ab9583'
       white: '#e1d5d5'
     bright:
-      black: '#21141d'
+      black: '#353e2b'
       red: '#cc9189'
       green: '#666d4b'
       yellow: '#f7e2cd'
@@ -48,7 +48,7 @@ themes:
       cyan: '#ab9583'
       white: '#e1d5d5'
     dim:
-      black: '#21141d'
+      black: '#3c3030'
       red: '#cc9189'
       green: '#666d4b'
       yellow: '#f7e2cd'

@@ -44,7 +44,7 @@ output DP-2 resolution 2560x1440 scale 1 position 1920,0
 
 
 
-bindsym $mod+i exec swaylock -e -f -i $HOME/wallpapers/0002.jpg
+bindsym $mod+$right exec swaylock -e -f -i $HOME/wallpapers/0002.jpg
 
 
 
@@ -77,10 +77,10 @@ bindsym $mod+i exec swaylock -e -f -i $HOME/wallpapers/0002.jpg
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    #bindsym $mod+$left focus left
+    #bindsym $mod+$down focus down
+    #bindsym $mod+$up focus up
+    #bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down

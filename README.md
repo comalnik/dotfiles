@@ -1,6 +1,5 @@
-# Dotfiles
-My Arch Linux dotfiles. Different rices are on separate branches.  
-# [[Sway] Nord](https://github.com/comalnik/dotfiles/tree/nord)
-![Nord Screenshot](/screenshots/nord1.png)
+# dotfiles
+My Dark academia/coffe themed Arch Linux dotfiles.
+![screenshot](/screenshots/screenshot1.png)
 
 

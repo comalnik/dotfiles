@@ -24,7 +24,7 @@ set $term alacritty
 set $menu "rofi -show drun"
 
 # Wallpaper
-output * bg $HOME/wallpapers/wallpapers/0007.jpg fill
+output * bg $HOME/wallpapers/0007.jpg fill
 
 # Display config
 
@@ -44,7 +44,7 @@ output DP-2 resolution 2560x1440 scale 1 position 1920,0
 
 
 
-bindsym $mod+$right exec swaylock -e -f -i $HOME/wallpapers/wallpapers/0007.jpg
+bindsym $mod+$right exec swaylock -e -f -i $HOME/wallpapers/0007.jpg
 
 
 

@@ -1,0 +1,21 @@
+set $base #191724
+set $surface #1f1d2e
+set $overlay #26233a
+
+set $muted #6e6a86
+set $subtle #908caa
+set $text #e0def4
+
+set $love #eb6f92
+set $gold #f6c177
+set $rose #ebbcba
+set $pine #31748f
+set $foam #9ccfd
+set $iris #c4a7e7
+
+set $highlightlow #21202e
+set $highlightmed #403d52
+set $highlighthigh #524f67
+
+set $ol-moon #393552
+set $sur-moon #2a273f

@@ -1,0 +1,134 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](bg:blue fg:black)\
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$character"""
+
+
+
+
+
+palette = 'forest'
+
+[palettes.forest]
+black = '#1f2227'
+grey = '#282c34'
+green = '#98c379'
+red = '#e06c75'
+blue = '#81a1c1'
+yellow = '#e5c07b' 
+magenta = '#c678dd' 
+white = '#c8ccd4'
+cyan = '#56b6c2'
+
+
+[os]
+disabled = false
+style = "bg:green fg:black"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:green fg:black"
+style_root = "bg:red fg:black"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:blue bg:grey"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol $branch ](fg:yellow bg:grey)]($style)'
+
+[git_status]
+style = "bg:grey"
+format = '[[($all_status$ahead_behind )](fg:yellow bg:grey)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+[c]
+symbol = " "
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+
+[python]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ($virtualenv)](fg:green bg:grey)]($style)'
+
+
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:gold"
+format = '[[  $time ](fg:text bg:overlay)]($style)'
+
+[line_break]
+disabled = false
+
+
+[character]
+success_symbol = "[](grey)"
+error_symbol = "[](red)"
+
+

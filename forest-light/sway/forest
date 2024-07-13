@@ -1,0 +1,9 @@
+set $black           #1f2227
+set $grey            #282c34
+set $green           #98c379
+set $red             #e06c75
+set $blue            #81a1c1    
+set $yellow          #e5c07b
+set $magenta         #c678dd
+set $white           #c8ccd4
+set $cyan            #56b6c2

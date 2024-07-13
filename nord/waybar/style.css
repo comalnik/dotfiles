@@ -1,0 +1,285 @@
+@import "nord.css";
+* {
+   
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: @pn1;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+window#waybar.termite {
+    background-color: #e5e9f0;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 0px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    /*replace this; sway workspaces button*/
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: @aurora5;
+    padding-left: 4px;
+    padding-right: 4px;
+
+}
+
+#workspaces button:hover {
+    background: @frost3;
+    border-radius: 2rem 2rem 2rem 2rem;
+    /* background: linear-gradient(to right, @frost3, @aurora5);*/
+    
+    color: @pn3;
+    text-shadow: none;
+
+
+}
+
+#workspaces button.focused {
+    background-color: @pn4;
+    border-radius: 2rem 2rem 2rem 2rem;
+
+}
+
+#workspaces button.urgent {
+    background-color: @aurora1;
+    border-radius: 2rem 2rem 2rem 2rem;
+}
+
+
+
+#workspaces {
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: @pn2;
+
+}
+
+
+#window {
+    background-color: @pn1 ;
+    color: @ss1;
+
+}
+
+#custom-pwrbtn,
+#custom-arch,
+#custom-lang,
+#custom-updates,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 11px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: @pn2;
+    /*border-radius: 2rem 2rem 2rem 2rem;*/
+}
+
+#mode {
+    padding-right:3px;
+    padding-left:3px;   
+}
+
+
+
+
+#custom-pwrbtn {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+    padding-left: 11px;
+    padding-right: 4px;
+    margin-right: 6px;
+    border-radius: 2rem 2rem 2rem 2rem;
+    color: @aurora1;
+}
+
+
+#custom-arch {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 6px;
+    padding-left: 11px;
+    padding-right: 5px;
+    margin-right: 3px;
+    border-radius: 2rem 2rem 2rem 2rem;
+    color: @frost2;
+}
+
+#network {
+    color: @rose;
+    margin-right:3px;
+    border-radius: 0 2rem 2rem 0;
+    padding-right: 9px;
+    color: @aurora2;
+}
+
+
+#custom-lang {
+    color: @text;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 2rem 2rem 2em 2rem;
+
+}
+
+#tray {
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin-left: 3px;
+    margin-right: 6px;
+   
+}
+
+
+#clock {
+    color: @ss1;
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin-right:3px;
+    margin-left:3px;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    margin-left:3px;
+    color: @frost1;
+    border-radius: 2rem 0 0 2rem;
+}
+
+#memory {
+    color: @frost1;
+    margin-right:3px;
+    border-radius: 0 2rem 2rem 0;
+}
+
+#disk {
+    color: @aurora4;
+}
+
+#custom-updates {
+    color: @aurora5;
+    background-color: @pn2;
+    border-radius: 2rem 0 0 2rem;
+    margin-left:3px;
+}
+
+
+#pulseaudio {
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin-right:3px;
+    color: @aurora3;
+}
+
+#pulseaudio.muted {
+    
+    color: @aurora1;
+}
+
+#wireplumber {
+ 
+    color: #000000;
+}
+
+#wireplumber.muted {
+    
+}
+
+
+#temperature {
+ color: white;
+}
+
+#temperature.critical ~ #cpu {
+    color: red;
+}
+
+#tray {
+   
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+   
+}
+
+
+#language {
+    background-color: @pn1;
+    color: @ss1;
+    padding: 0 3px;
+    margin: 0 3px;
+    min-width: 16px;
+
+}
+
+
+
+
+
+#keyboard-state > label.locked {
+    color: @ss1;
+    padding-left: 3px;
+    padding-right: 3px;
+}       
+
+#scratchpad {
+    background: @pn1;
+    color: @ss1;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}

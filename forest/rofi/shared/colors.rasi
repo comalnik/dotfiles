@@ -1,0 +1,12 @@
+* {
+	black: #1f2227;
+	grey: #282c34;
+	green: #98c379;
+	red: #e06c75;
+	blue: #81a1c1;
+	yellow: #e5c07b;
+	magenta: #c678dd;
+	white: #c8ccd4;
+	cyan: #56b6c2;
+
+}

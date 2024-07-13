@@ -1,0 +1,282 @@
+@import "rose-pine.css";
+* {
+   
+    font-family: Maple mono;
+    font-size: 18px;
+}
+
+window#waybar {
+    /*background: rgb(2,0,36);
+    background: linear-gradient(90deg, #eb6f92 0%, #f6c177 25%, #ebbcba 50%, #9ccfd8 75%, #c4a7e7 100%);*/
+    /*background-color: rgba(0,0,0,0);*/
+    background-color: @base;
+    transition-property: background-color;
+    transition-duration: .5s;
+    /*border-bottom: 3px solid @sur-moon;*/
+    border-bottom: 3px solid @iris;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+window#waybar.termite {
+    background-color: #e5e9f0;
+}
+
+
+/* multiple elements config */
+#custom-arch,
+#custom-lang,
+#custom-cava-internal,
+#custom-updates,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 8px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    background-color: @sur-moon;
+}
+
+
+#scratchpad,
+#mode {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+}
+
+
+
+/*left*/
+
+#custom-arch {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 6px;
+    padding-left: 11px;
+    margin-right: 3px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: @foam;
+}
+
+
+
+#workspaces {
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: @sur-moon;
+
+}
+#workspaces button {
+    background-color: transparent;
+    color: @iris;
+    padding-left: 3px;
+    padding-right: 3px;
+
+}
+#workspaces button:hover {
+    background: @iris;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: @base;
+    text-shadow: none;
+}
+#workspaces button.focused {
+    background-color: @pine;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: @text;
+
+}
+#workspaces button.urgent {
+    background-color: @love;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: @base;
+}
+
+#custom-lang {
+    color: @text;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+}
+
+#tray {
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-left: 3px;
+    margin-right: 3px;
+   
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+   
+}
+
+#custom-cava-internal {
+    color: @iris;
+    background-color: @sur-moon;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+
+}
+
+
+
+#scratchpad {
+    background-color: transparent;
+    color: @text;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+
+#mode {
+    background-color: transparent;
+    color: @text;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#keyboard-state > label.locked {
+    color: @text;
+    padding-left: 3px;
+    padding-right: 3px;
+}    
+
+
+/*center*/
+
+#window {
+    background-color: rgba(0,0,0,0) ;
+    color: @rose;
+    padding-left: 11px;
+    padding-right:11px;
+    font-size: 19px;
+
+
+}
+
+/*right*/
+#pulseaudio {
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-right:3px;
+    color: @gold;
+}
+
+#pulseaudio.muted {
+    
+    color: @love;
+}
+
+/*
+#wireplumber {
+ 
+    color: #000000;
+}
+
+#wireplumber.muted {
+    
+}
+*/
+#custom-updates {
+    color: @rose;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin-left:3px;
+}
+
+#disk {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    background-color: @sur-moon;
+    color: @rose;
+}
+
+#network {
+    color: @rose;
+    margin-right:3px;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding-right: 9px;
+}
+
+#network.disconnected {
+    color: @love;
+
+}
+
+#cpu {
+    margin-left:3px;
+    color: @foam;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#memory {
+    color: @foam;
+    margin-right:3px;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/*
+#temperature {
+    color: white;
+   }
+   
+   #temperature.critical ~ #cpu {
+       color: red;
+   }
+*/
+
+#clock {
+    color: @iris;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-right:3px;
+    margin-left:3px;
+}
+
+
+#custom-pwrbtn {
+    color: @base;
+    background-color: @love;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+    padding-right:6px;
+    margin-right:6px;
+    margin-left:3px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+}
+
+
+
+
+

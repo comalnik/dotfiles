@@ -1,0 +1,244 @@
+@import "nord.css";
+* {
+   
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: rgba(46, 52, 64, 0.9); 
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+window#waybar.termite {
+    background-color: #e5e9f0;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 0px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    /*replace this; sway workspaces button*/
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: @ss1;
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+
+#workspaces button:hover {
+    /* background: linear-gradient(to right, @frost3, @aurora5);*/
+    color: @aurora5;
+    text-shadow: none;
+
+
+}
+
+#workspaces button.focused {
+    color: @frost1;
+
+}
+
+#workspaces button.urgent {
+    color: @aurora1;
+}
+
+
+
+#workspaces {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+
+#window {
+    background-color: @pn1 ;
+    color: @ss1;
+
+}
+
+#custom-pwrbtn,
+#custom-arch,
+#custom-lang,
+#custom-updates,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 11px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#custom-separator {
+    color: rgba(216, 222, 233, 0.4);
+}
+
+
+
+#mode {
+    padding-right:3px;
+    padding-left:3px;   
+}
+
+
+#custom-pwrbtn {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    color: @frost1;
+}
+
+
+#custom-arch {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    color: @frost2;
+}
+
+#network {
+
+    color: @ss1;
+}
+
+
+#custom-lang {
+    color: @ss1;
+
+
+}
+
+#tray {
+
+
+   
+}
+
+
+#clock {
+    color: @ss1;
+
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    color: @ss1;
+    border-radius: 2rem 0 0 2rem;
+}
+
+#memory {
+    color: @ss1;
+    border-radius: 0 2rem 2rem 0;
+}
+
+#disk {
+    color: @ss1;
+}
+
+#custom-updates {
+    color: @ss1;
+}
+
+
+#pulseaudio {
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin-right:3px;
+    color: @ss1;
+}
+
+#pulseaudio.muted {
+    
+    color: @aurora1;
+}
+
+#wireplumber {
+ 
+    color: #000000;
+}
+
+#wireplumber.muted {
+    
+}
+
+
+#temperature {
+ color: white;
+}
+
+#temperature.critical ~ #cpu {
+    color: red;
+}
+
+#tray {
+   
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+   
+}
+
+
+
+
+
+#keyboard-state > label.locked {
+    color: @ss1;
+    padding-left: 3px;
+    padding-right: 3px;
+}       
+
+#scratchpad {
+    background: @pn1;
+    color: @ss1;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}

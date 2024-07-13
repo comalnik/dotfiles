@@ -1,0 +1,286 @@
+{
+    "layer": "top", // Waybar at top layer
+    "height": 40, 
+    "spacing": 0, // Gaps between modules (4px)
+    "output": "DP-2",
+    "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray", "custom/cava-internal", "sway/scratchpad", "sway/mode", "keyboard-state"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "custom/updates", "disk","network","temperature", "cpu", "memory", "clock", "custom/pwrbtn" ],
+
+
+    "custom/launch": {
+        "format": "",
+        "on-click": "rofi -show drun"
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+
+    "custom/cava-internal": {
+        "exec": "sh ~/dotfiles/.scripts/waybar/Cava.sh",
+        "format": "{}",
+        "format-alt": "󱕎 ",
+        "tooltip": false,
+        //"on-click": "swaymsg reload & pkill waybar & waybar",
+        "layer": "below",
+        "output": "all"
+      },
+
+    "custom/pwrbtn": {
+        "format": "⏻ ",
+        "on-click": "$HOME/dotfiles/.scripts/rofi/rofi_powermenu"
+    },
+
+
+
+
+
+
+
+
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": " {icon} ",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+        },
+    },
+
+
+
+    "sway/language": {
+        "format": "⏻  {short} {variant}",
+        "tooltip": false,
+        "exec": "setxkbmap si"
+    },
+
+
+
+
+    "sway/window": {
+        "max-length": 30,
+        "tooltip": false
+    },
+
+
+
+
+
+
+
+    "custom/updates": {
+        "format": "󰶼 {}",
+        "exec": "checkupdates | wc -l",
+        "restart-interval": "once",
+        "on-click": "alacritty -e yay -Syyu",
+        "tooltip": false
+    },
+
+    "custom/arch": {
+        "format": "󰣇 ",
+        //"on-click": "alacritty -e neofetch"
+        "tooltip": false,
+"on-click": "$HOME/dotfiles/.scripts/rofi/rofi_themes",
+        "on-click-middle": "swaymsg reload & pkill waybar & waybar",
+        "on-click-right": "$HOME/dotfiles/.scripts/rofi/rofi_wallpapers",
+    },
+
+
+
+
+    "disk": {
+        "path": "/",
+        "format": " {percentage_free}%",
+        "on-click": "alacritty -e sudo pacman -Scc",
+        "interval": 300,
+        "tooltip": false
+    },
+    
+    "keyboard-state": {
+        "capslock": true,
+        "format-icons": {
+            "locked": "Caps",
+            "unlocked": ""
+        },
+        "format": "{icon}",
+        "tooltip": false,
+        "show-empty": false
+    },
+
+
+
+    "custom/lang": {
+        "interval": "once",
+        "exec": "setxkbmap -query | grep layout | awk '{print $2}'",
+        "on-click": "sh ~/dotfiles/.scripts/waybar/keyboard.sh; pkill -SIGRTMIN+10 waybar",
+        "signal": 10,
+        "exec-on-event": "false",
+        "tooltip": false
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": false,
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%d/%m/%Y %H:%M}",
+        // "timezone": "America/New_York",
+        //"tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "tooltip": false,
+        "interval": 5,
+        "format-alt": "{:%d/%m/%Y %H:%M:%S}"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {}%",
+        "tooltip": false
+    },
+    "temperature": {
+        //"thermal-zone": 2,
+        //"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 2,
+        //"format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "tooltip": false,
+        "format-icons": ["", "", ""]
+    },
+
+
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        //"format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "󰲝 ",
+        //"tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip": false,
+        //"format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰲜 ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        //"format-muted": "󰝟 {format_source}",
+        "format-muted": "󰝟 ",
+        "tooltip": false,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "snd_stat=$(pactl get-sink-mute @DEFAULT_SINK@ | sed 's/Mute: //g'); if [ $snd_stat = 'no' ]; then amixer set Master mute; elif [ $snd_stat = 'yes' ]; then amixer set Master unmute; fi",
+        "on-click-right": "pavucontrol",
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}
+

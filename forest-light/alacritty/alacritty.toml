@@ -1,0 +1,76 @@
+
+[colors.primary]
+foreground = "#d8caac"
+background = "#323d43"
+dim_foreground = "#323d43"
+bright_foreground = "#323d43"
+
+[colors.cursor]
+text = "#323d43"
+cursor = "#d8caac"
+
+[colors.vi_mode_cursor]
+text = "#323d43"
+cursor = "#d8caac"
+
+[colors.selection]
+text = "#323d43"
+background = "#d8caac"
+
+[colors.normal]
+black = "#323d43"
+red = "#e68183"
+green = "#a7c080"
+yellow = "#d9bb80"
+blue = "#89beba"
+magenta = "#d3a0bc"
+cyan = "#87c095"
+white = "#d8caac"
+
+[colors.bright]
+black = "#323d43"
+red = "#e68183"
+green = "#a7c080"
+yellow = "#d9bb80"
+blue = "#89beba"
+magenta = "#d3a0bc"
+cyan = "#87c095"
+white = "#d8caac"
+
+[colors.dim]
+black = "#323d43"
+red = "#e68183"
+green = "#a7c080"
+yellow = "#d9bb80"
+blue = "#89beba"
+magenta = "#d3a0bc"
+cyan = "#87c095"
+white = "#d8caac"
+
+
+
+[env]
+SHELL = "/bin/zsh"
+TERM = "alacritty"
+
+[font]
+size = 10
+
+[font.bold]
+family = "Maple Mono NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "Maple Mono NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "Maple Mono NF"
+style = "Italic"
+
+[font.normal]
+family = "Maple Mono NF"
+style = "Medium"
+
+[font.offset]
+x = 1

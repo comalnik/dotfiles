@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+RASI="$HOME/.config/rofi/wallpapers.rasi"
+WALLPAPER="$HOME/dotfiles/.wall.jpg"
+WALLPAPER_DIR="$HOME/dotfiles/.wallpapers"
+CURRENT_DIR="$WALLPAPER_DIR"
+
+while true; do
+    # List and sort files and directories in the current directory
+    SELECTED=$(find "$CURRENT_DIR" -maxdepth 1 | sort | while read A; do 
+        if [ -d "$A" ] && [ "$A" != "$CURRENT_DIR" ]; then
+            # Add directory entries
+            echo -en "$(basename "$A")/\x00icon\x1ffolder\n"
+        elif [ -f "$A" ]; then
+            # Add file entries
+            echo -en "$(basename "$A")\x00icon\x1f$A\n"
+        fi
+    done | rofi -dmenu -config $RASI)
+
+    if [[ -z "$SELECTED" ]]; then
+        # Exit if no selection is made
+        exit
+    elif [[ "$SELECTED" == */ ]]; then
+        # Enter the selected directory
+        CURRENT_DIR="$CURRENT_DIR/$(basename "$SELECTED")"
+    else
+        # Select the wallpaper and exit the loop
+        SELECTED_FILE="$CURRENT_DIR/$SELECTED"
+        /bin/rm $WALLPAPER
+        ln -s "$SELECTED_FILE" $WALLPAPER
+        swaymsg reload
+        exit
+    fi
+done

@@ -47,15 +47,15 @@ window#waybar.termite {
 #mpd {
     padding: 0 8px;
     margin-top: 4px;
-    margin-bottom: 5px;
     background-color: @sur-moon;
+    
 }
 
 
 #scratchpad,
 #mode {
     margin-top: 4px;
-    margin-bottom: 5px;
+    
     padding-left: 3px;
     padding-right: 3px;
 
@@ -67,7 +67,7 @@ window#waybar.termite {
 
 #custom-arch {
     margin-top: 4px;
-    margin-bottom: 5px;
+    
     margin-left: 6px;
     padding-left: 11px;
     margin-right: 3px;
@@ -80,7 +80,7 @@ window#waybar.termite {
 #workspaces {
     border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     margin-top: 4px;
-    margin-bottom: 5px;
+    
     margin-left: 3px;
     margin-right: 3px;
     background-color: @sur-moon;
@@ -150,8 +150,13 @@ window#waybar.termite {
 
 
 #scratchpad {
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background-color: @sur-moon;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
     color: @foam;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -159,16 +164,26 @@ window#waybar.termite {
 
 
 #mode {
-    background-color: transparent;
+    background-color: @sur-moon;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+
     color: @foam;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 3px;
     margin-right: 3px;
 }
 
 #keyboard-state > label.locked {
+    background-color: @sur-moon;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     color: @foam;
-    padding-left: 3px;
-    padding-right: 3px;
+    margin-top: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
 }   
 
 
@@ -216,7 +231,7 @@ window#waybar.termite {
     padding-left: 6px;
     padding-right: 6px;
     margin-top: 4px;
-    margin-bottom: 5px;
+    
     background-color: @sur-moon;
     color: @rose;
 }
@@ -267,7 +282,7 @@ window#waybar.termite {
     color: @base;
     background-color: @love;
     margin-top: 4px;
-    margin-bottom: 5px;
+    
     padding-left: 8px;
     padding-right:6px;
     margin-right:6px;

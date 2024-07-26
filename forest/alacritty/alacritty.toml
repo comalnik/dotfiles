@@ -14,8 +14,8 @@ text = "#1f2227"
 cursor = "#c8ccd4"
 
 [colors.selection]
-text = "#c8ccd4"
-background = "#1f2227"
+text = "#1f2227"
+background = "#98c379"
 
 [colors.normal]
 black = "#1f2227"

@@ -70,7 +70,6 @@ button:hover {
 
 
 #window {
-    background-color: @pn1 ;
     color: @ss1;
 
 }
@@ -233,7 +232,6 @@ label:focus {
 }       
 
 #scratchpad {
-    background: @pn1;
     color: @ss1;
     padding-left: 3px;
     padding-right: 3px;

@@ -1,11 +1,47 @@
 {
     "layer": "top", // Waybar at top layer
-    "height": 40, 
+    "height": 20, 
     "spacing": 0, // Gaps between modules (4px)
     "output": "DP-2",
-    "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray", "sway/scratchpad", "sway/mode", "keyboard-state"],
+    "modules-left": ["custom/arch","sway/workspaces", "custom/right-arrow-dark","custom/lang", "tray","custom/right-arrow-blu" ,"sway/scratchpad", "sway/mode", "keyboard-state"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "custom/updates", "disk", "clock", "custom/pwrbtn" ],
+    "modules-right": ["custom/left-arrow-yel", "pulseaudio","custom/left-arrow-blu", "custom/updates","custom/left-arrow-red", "disk","custom/left-arrow-grn", "clock", "custom/pwrbtn" ],
+
+
+    "custom/left-arrow-yel": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/left-arrow-blu": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/left-arrow-red": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/left-arrow-grn": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right-arrow-yel": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/right-arrow-blu": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/right-arrow-grn": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+
 
 
     "custom/launch": {

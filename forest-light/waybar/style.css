@@ -24,6 +24,41 @@ window#waybar.termite {
     background-color: #e5e9f0;
 }
 
+/*arrows*/
+#custom-left-arrow-yel {
+    font-size: 34px;
+    color: @yellow;
+}
+#custom-left-arrow-red {
+    font-size: 34px;
+    color: @red;
+    background-color: @blue;
+}
+#custom-left-arrow-blu {
+    font-size: 34px;
+    background-color: @yellow;
+    color: @blue; 
+}
+#custom-left-arrow-grn {
+    font-size: 34px;
+    background-color: @red;
+    color: @green;
+}
+
+
+#custom-right-arrow-dark {
+    font-size: 34px;
+    color: @black;
+    background-color: @green;
+}
+#custom-right-arrow-blu {
+    font-size: 34px;
+    background-color: @black;
+    color: @green; 
+}
+
+
+
 
 /* multiple elements config */
 #custom-arch,
@@ -45,8 +80,6 @@ window#waybar.termite {
 #scratchpad,
 #mpd {
     padding: 0 8px;
-    margin-top: 4px;
-    margin-bottom: 5px;
 }
 
 
@@ -110,20 +143,18 @@ window#waybar.termite {
 }
 
 #custom-lang {
-    color: @green;
-    margin-left: 3px;
-    margin-right: 3px;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: @black;
+    background-color: @green;
+    padding-left: 5px;
+    padding-right: 3px;
 
 }
 
 #tray {
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-    margin-left: 4px;
-    margin-right: 4px;
-    color: @blue;
+    color: @black;
+    background-color: @green;
    
 }
 
@@ -175,13 +206,14 @@ window#waybar.termite {
 
 /*right*/
 #pulseaudio {
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-    margin-right:4px;
-    color: @yellow;
+    padding-right:4px;
+    color: @black;
+    background-color: @yellow;
 }
 
 #pulseaudio.muted {
-    
+    background-color: @yellow;
+
     color: @red;
 }
 
@@ -196,20 +228,17 @@ window#waybar.termite {
 }
 */
 #custom-updates {
-    color: @blue;
-    border-radius: 0.5rem 0 0 0.5rem;
-    margin-left:4px;
-    margin-right:4px;
+    background-color: @blue;
+    color: @black;
+    padding-left:4px;
+    padding-right:4px;
 }
 
 #disk {
     padding-left: 6px;
     padding-right: 6px;
-    margin-top: 4px;
-    margin-bottom: 5px;
-    margin-right:4px;
-    margin-left:4px;
-    color: @red;
+    background-color: @red;
+    color: @black;
 }
 
 
@@ -225,21 +254,20 @@ window#waybar.termite {
 */
 
 #clock {
-    color: @green;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-    margin-left:4px;
-    margin-right: 4px;
+    background-color: @green;
+    color: @black;
+    padding-left:4px;
+    padding-right: 4px;
 }
 
 
 #custom-pwrbtn {
-    color: @red;
-    margin-top: 4px;
-    margin-bottom: 7px;
-    padding-right:6px;
-    margin-right:8px;
-    margin-left:4px;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: @black;
+    background-color: @green;
+    padding-top: 4px;
+    padding-bottom: 7px;
+    padding-right:8px;
+    padding-left:8px;
 
 }
 

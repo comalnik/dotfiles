@@ -1,6 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "height": 40, 
+    "height": 35, 
     "spacing": 0, // Gaps between modules (4px)
     "output": "DP-2",
     "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray", "custom/cava-internal", "sway/scratchpad", "sway/mode", "keyboard-state"],

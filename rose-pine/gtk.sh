@@ -5,7 +5,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 gsettings set org.gnome.desktop.wm.preferences theme "rose-pine-gtk"
 
 # Set font
-gsettings set org.gnome.desktop.interface font-name "Maple Mono 11"
+gsettings set org.gnome.desktop.interface font-name "Maple Mono NF 11"
 
 # Set cursor theme
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"

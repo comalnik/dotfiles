@@ -18,35 +18,35 @@
 ![Forest Warm screenshot](/.screenshots/forest-warm.png)
 
 ## Required packages (arch linux, including aur packages)
-git
-alacritty
-sway
-swaylock
-starship
-waybar
-ttf-jetbrains-mono-nerd
-rofi-wayland
-zsh-syntax-highlighting
-xorg-xwayland
-zsh
-zsh-autosuggestions
-eza
-swaybg
-paper-icon-theme
-papirus-icon-theme
-rose-pine-cursor
-rose-pine-gtk-theme-full
-nordic-theme
-nordzy-cursors
-librewolf-bin
-gruvbox-icon-theme
-gruvbox-dark-gtk
-everforest-gtk-theme-git
+git\
+alacritty\
+sway\
+swaylock\
+starship\
+waybar\
+ttf-jetbrains-mono-nerd\
+rofi-wayland\
+zsh-syntax-highlighting\
+xorg-xwayland\
+zsh\
+zsh-autosuggestions\
+eza\
+swaybg\
+paper-icon-theme\
+papirus-icon-theme\
+rose-pine-cursor\
+rose-pine-gtk-theme-full\
+nordic-theme\
+nordzy-cursors\
+librewolf-bin\
+gruvbox-icon-theme\
+gruvbox-dark-gtk\
+everforest-gtk-theme-git\
 ttf-maple [Or download a newer version](https://github.com/subframe7536/maple-font/releases)
 
 ## To install it:
-Clone this repo in your home directory
-Delete/rename .config/sway, waybar, alacritty, rofi, starship.toml and .zshrc
+Clone this repo in your home directory\
+Delete/rename .config/sway, waybar, alacritty, rofi, starship.toml and .zshrc\
 Run .install.sh and choose a theme
 
 # [Nord [old]](https://github.com/comalnik/dotfiles/tree/nord)

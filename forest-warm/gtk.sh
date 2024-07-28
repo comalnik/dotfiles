@@ -5,8 +5,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "gruvbox-dark-gtk"
 gsettings set org.gnome.desktop.wm.preferences theme "gruvbox-dark-gtk"
 
 # Set font
-gsettings set org.gnome.desktop.interface font-name "Maple Mono 11"
-
+gsettings set org.gnome.desktop.interface font-name "Maple Mono NF 11"
 # Set cursor theme
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
 

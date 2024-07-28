@@ -86,4 +86,4 @@ fi
 IFS=$SAVEIFS
 
 
-colorscript -e 29
+$HOME/dotfiles/.scripts/panes

@@ -45,7 +45,7 @@ output DP-2 resolution 2560x1440 scale 1 position 1920,0
 
 
 
-bindsym $mod+$right exec swaylock -e -f -i $HOME/dotfiles/.wall.jpg 
+bindsym $mod+$right exec swaylock -e -f -C $HOME/.config/sway/swaylock/nord -i $HOME/dotfiles/.wall.jpg 
 
 
 

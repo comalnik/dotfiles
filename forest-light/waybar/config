@@ -3,7 +3,7 @@
     "height": 20, 
     "spacing": 0, // Gaps between modules (4px)
     "output": "DP-2",
-    "modules-left": ["custom/arch","sway/workspaces", "custom/right-arrow-dark","custom/lang", "tray","custom/right-arrow-blu" ,"sway/scratchpad", "sway/mode", "keyboard-state"],
+    "modules-left": ["custom/arch","sway/workspaces", "custom/right-arrow-dark","custom/lang", "tray","custom/right-arrow-blu","mpd","custom/right-arrow-yel" ,"sway/scratchpad", "sway/mode", "keyboard-state"],
     "modules-center": ["sway/window"],
     "modules-right": ["custom/left-arrow-yel", "pulseaudio","custom/left-arrow-blu", "custom/updates","custom/left-arrow-red", "disk","custom/left-arrow-grn", "clock", "custom/pwrbtn" ],
 
@@ -50,16 +50,16 @@
     },
 
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format": " {stateIcon}{repeatIcon}{artist} - {title} ({elapsedTime:%M:%S})",
         "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "󰝛",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
             "on": " "
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
+            "off": "",
             "on": " "
         },
         "repeat-icons": {
@@ -69,11 +69,10 @@
             "on": "1 "
         },
         "state-icons": {
-            "paused": "",
-            "playing": ""
+            "paused": " ",
+            "playing": " "
         },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "tooltip": false
     },
 
 
@@ -89,6 +88,7 @@
 
     "custom/pwrbtn": {
         "format": "⏻ ",
+        "tooltip": false,
         "on-click": "$HOME/dotfiles/.scripts/rofi/rofi_powermenu"
     },
 
@@ -191,32 +191,7 @@
         "format-icons": ["", ""],
         "tooltip": false,
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
+
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {

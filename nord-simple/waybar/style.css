@@ -98,6 +98,8 @@ button:hover {
     margin-bottom: 4px;
 }
 
+
+
 #custom-separator {
     color: rgba(216, 222, 233, 0.4);
 }
@@ -233,7 +235,7 @@ label:focus {
 
 #scratchpad {
     color: @ss1;
-    padding-left: 3px;
+    padding-left: 6px;
     padding-right: 3px;
 }
 

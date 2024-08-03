@@ -49,6 +49,11 @@ window#waybar.termite {
     margin-bottom: 5px;
 }
 
+#mpd {
+    color:@red;
+    margin-right: 3px;
+}
+
 
 #scratchpad,
 #mode {

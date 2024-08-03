@@ -109,6 +109,11 @@ button:hover {
     /*border-radius: 2rem 2rem 2rem 2rem;*/
 }
 
+#mpd {
+    color: @frost3;
+    border-radius: 2rem 2rem 2rem 2rem;
+}
+
 #mode {
     padding-right:3px;
     padding-left:3px;   
@@ -276,7 +281,7 @@ label:focus {
 #scratchpad {
     background: @pn1;
     color: @ss1;
-    padding-left: 3px;
+    padding-left: 6px;
     padding-right: 3px;
 }
 

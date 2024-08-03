@@ -51,6 +51,12 @@ window#waybar.termite {
     background-color: @sur-moon;
 }
 
+#mpd {
+    color: @iris;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+}
+
 
 #scratchpad,
 #mode {

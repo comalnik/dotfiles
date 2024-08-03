@@ -74,9 +74,9 @@ confirm_run () {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		swaylock -e -f -i $HOME/wallpapers/0002.jpg
+		swaylock -e -f -i $HOME/dotfiles/.wall.jpg
 	elif [[ "$1" == '--opt2' ]]; then
-		confirm_run 'systemctl hibernate'
+		confirm_run 'systemctl suspend'
 	elif [[ "$1" == '--opt3' ]]; then
 		confirm_run 'systemctl reboot'
 	elif [[ "$1" == '--opt4' ]]; then

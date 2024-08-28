@@ -29,6 +29,7 @@ rofi-wayland\
 zsh-syntax-highlighting\
 xorg-xwayland\
 zsh\
+pass\
 zsh-autosuggestions\
 eza\
 swaybg\
@@ -42,6 +43,7 @@ librewolf-bin\
 gruvbox-icon-theme\
 gruvbox-dark-gtk\
 everforest-gtk-theme-git\
+rofi-pass\
 ttf-maple [Or download a newer version](https://github.com/subframe7536/maple-font/releases)
 
 ## To install it:

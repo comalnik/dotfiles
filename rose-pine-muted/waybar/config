@@ -105,8 +105,8 @@
     "custom/updates": {
         "format": "󰶼 {}",
         "exec": "checkupdates | wc -l",
-        "restart-interval": "once",
-        "on-click": "alacritty -e yay -Syyu",
+        "restart-interval": "300",
+        "on-click": "alacritty -e yay -Syu; checkupdates | wc -l",
         "tooltip": false
     },
 
@@ -125,7 +125,7 @@
 
     "disk": {
         "path": "/",
-        "format": " {percentage_free}%",
+        "format": " {percentage_used}%",
         "on-click": "alacritty -e sudo pacman -Scc",
         "interval": 300,
         "tooltip": false

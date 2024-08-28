@@ -6,8 +6,8 @@
 configuration {
 	modi:                       "drun,run";
     show-icons:                 true;
-    display-drun:               "";
-    display-run:                "";
+    display-drun:               " ";
+    display-run:                " ";
 	drun-display-format:        "{name}";
 	window-format:              "{c} · {t}";
 }
@@ -108,7 +108,7 @@ textbox-prompt-colon {
     enabled:                     true;
     padding:                     8px 0px;
     expand:                      false;
-    str:                         "";
+    str:                         " ";
     background-color:            inherit;
     text-color:                  inherit;
 }

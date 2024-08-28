@@ -195,12 +195,11 @@ bar {
 }
 
 #rofi
-
-#bindsym $mod+d exec --no-startup-id rofi -show drun
-#bindsym $mod+x exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show window
+bindsym $mod+x exec firefox
 bindsym $mod+p exec $HOME/dotfiles/.scripts/rofi/rofi_powermenu
-#bindsym $mod+c exec --no-startup-id rofi -show calc
-#bindsym $mod+i exec --no-startup-id bash rofi-pass
+bindsym $mod+c exec exec deepin-calculator
+bindsym $mod+i exec --no-startup-id bash rofi-pass
 
 #librewolf
 bindsym $mod+o exec librewolf

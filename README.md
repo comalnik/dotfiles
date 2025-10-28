@@ -27,6 +27,7 @@ rofi-wayland\
 zsh-syntax-highlighting\
 xorg-xwayland\
 caja\
+gnome-calculator\
 zsh\
 pass\
 zsh-autosuggestions\

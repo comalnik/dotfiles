@@ -10,10 +10,13 @@ export GPG_TTY=$(tty)
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=10000
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
 
 
 
 # aliases
+#alias yt-dlmp="yt-dlp -f bestaudio --extract-audio --audio-format opus --embed-metadata --embed-thumbnail"
+#alias yt-dlm="yt-dlp -f bestaudio --extract-audio --audio-format opus --embed-metadata --embed-thumbnail --no-playlist"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
@@ -27,7 +30,6 @@ alias pull="git pull"
 alias push="git push"
 alias lsa="exa -al --color=always"
 alias ls="exa -l --icons --color=always"
-
 
 
 # set prompt
@@ -87,3 +89,7 @@ IFS=$SAVEIFS
 
 
 $HOME/dotfiles/.scripts/panes
+
+
+
+

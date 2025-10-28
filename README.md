@@ -12,8 +12,6 @@
 ![Nord Simple screenshot](/.screenshots/nord-simple.png)
 ### Forest
 ![Forest screenshot](/.screenshots/forest.png)
-### Forest Light
-![Forest Light screenshot](/.screenshots/forest-light.png)
 ### Forest Warm
 ![Forest Warm screenshot](/.screenshots/forest-warm.png)
 
@@ -28,11 +26,15 @@ ttf-jetbrains-mono-nerd\
 rofi-wayland\
 zsh-syntax-highlighting\
 xorg-xwayland\
+caja\
 zsh\
 pass\
 zsh-autosuggestions\
 eza\
 swaybg\
+autotiling\
+grim\
+slurp\
 paper-icon-theme\
 papirus-icon-theme\
 rose-pine-cursor\
@@ -43,7 +45,6 @@ librewolf-bin\
 gruvbox-icon-theme\
 gruvbox-dark-gtk\
 everforest-gtk-theme-git\
-rofi-pass\
 ttf-maple [Or download a newer version](https://github.com/subframe7536/maple-font/releases)
 
 ## To install it:

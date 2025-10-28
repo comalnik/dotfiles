@@ -3,7 +3,7 @@
     "height": 40, 
     "spacing": 0, // Gaps between modules (4px)
     "output": "DP-2",
-    "modules-left": ["custom/arch", "custom/separator", "sway/workspaces", "custom/separator", "custom/lang", "custom/separator", "tray", "custom/separator", "mpd", "custom/separator", "sway/scratchpad", "sway/mode", "keyboard-state"],
+    "modules-left": ["custom/arch", "custom/separator", "sway/workspaces", "custom/separator", "custom/lang", "custom/separator", "tray", "custom/separator", "custom/separator", "sway/scratchpad", "sway/mode", "keyboard-state"],
     "modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "custom/separator", "custom/updates", "custom/separator", "disk", "custom/separator","network", "custom/separator", "cpu", "custom/separator", "memory", "custom/separator", "clock", "custom/separator", "custom/pwrbtn"],
     // Modules configuration
@@ -44,12 +44,13 @@
     },
     "custom/lang": {
         "interval": "once",
-        "exec": "setxkbmap -query | grep layout | awk '{print $2}'",
+        "exec": "swaymsg -t get_inputs | jq -r '.[] | select(.type==\"keyboard\") | .xkb_active_layout_name' | head -n 1",
         "on-click": "sh ~/dotfiles/.scripts/waybar/keyboard.sh; pkill -SIGRTMIN+10 waybar",
         "signal": 10,
         "exec-on-event": "false",
         "tooltip": false
     },
+
 
     "mpd": {
         "format": " {stateIcon}{repeatIcon}{artist} - {title} ({elapsedTime:%M:%S})",

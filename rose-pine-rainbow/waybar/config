@@ -3,7 +3,7 @@
     "height": 40,
     "spacing": 0, // Gaps between modules (4px)
     "output": "DP-2",
-    "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray", "custom/cava-internal","mpd", "sway/scratchpad", "sway/mode", "keyboard-state"],
+    "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray", "custom/cava-internal", "sway/scratchpad", "sway/mode", "keyboard-state"],
     "modules-center": ["sway/window"],
     "modules-right": [ "pipewire","pulseaudio", "custom/updates", "disk","network","temperature", "cpu", "memory", "clock", "custom/pwrbtn" ],
 
@@ -96,7 +96,7 @@
         "format": "󰣇 ",
         //"on-click": "alacritty -e neofetch"
         "tooltip": false,
-"on-click": "$HOME/dotfiles/.scripts/rofi/rofi_themes",
+        "on-click": "$HOME/dotfiles/.scripts/rofi/rofi_themes",
         "on-click-middle": "swaymsg reload & pkill waybar & waybar",
         "on-click-right": "$HOME/dotfiles/.scripts/rofi/rofi_wallpapers",
     },
@@ -116,12 +116,19 @@
 
     "custom/lang": {
         "interval": "once",
-        "exec": "setxkbmap -query | grep layout | awk '{print $2}'",
+        "exec": "swaymsg -t get_inputs | jq -r '.[] | select(.type==\"keyboard\") | .xkb_active_layout_name' | head -n 1",
         "on-click": "sh ~/dotfiles/.scripts/waybar/keyboard.sh; pkill -SIGRTMIN+10 waybar",
         "signal": 10,
         "exec-on-event": "false",
         "tooltip": false
     },
+
+
+
+
+
+
+
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },

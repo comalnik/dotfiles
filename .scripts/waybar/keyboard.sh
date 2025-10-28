@@ -1,10 +1,8 @@
 #!/bin/bash
+lang=$(swaymsg -t get_inputs | jq -r '.[] | select(.type=="keyboard") | .xkb_active_layout_name' | head -n 1)
 
-lang=$(setxkbmap -query | grep layout | awk '{print $2}')
-
-# Check the value of lang and execute the appropriate command
-if [ "$lang" = "us" ]; then
-  setxkbmap si
-elif [ "$lang" = "si" ]; then
-  setxkbmap us
+if [[ "$lang" == "English (US)" ]]; then
+    swaymsg input "*" xkb_switch_layout 1
+else
+    swaymsg input "*" xkb_switch_layout 0
 fi

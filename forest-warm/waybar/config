@@ -3,7 +3,7 @@
     "height": 40, 
     "spacing": 0, // Gaps between modules (4px)
     "output": "DP-2",
-    "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray","mpd", "sway/scratchpad", "sway/mode", "keyboard-state"],
+    "modules-left": ["custom/arch","sway/workspaces", "custom/lang", "tray", "sway/scratchpad", "sway/mode", "keyboard-state"],
     "modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "custom/updates", "disk", "clock", "custom/pwrbtn" ],
 
@@ -140,12 +140,13 @@
 
     "custom/lang": {
         "interval": "once",
-        "exec": "setxkbmap -query | grep layout | awk '{print $2}'",
+        "exec": "swaymsg -t get_inputs | jq -r '.[] | select(.type==\"keyboard\") | .xkb_active_layout_name' | head -n 1",
         "on-click": "sh ~/dotfiles/.scripts/waybar/keyboard.sh; pkill -SIGRTMIN+10 waybar",
         "signal": 10,
         "exec-on-event": "false",
         "tooltip": false
     },
+
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },

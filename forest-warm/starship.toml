@@ -116,6 +116,27 @@ style = "bg:grey"
 format = '[[ $symbol( $version) ($virtualenv)](fg:green bg:grey)]($style)'
 
 
+[php]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+[java]
+symbol = " "
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:grey"
+format = '[[ $symbol( $version) ](fg:green bg:grey)]($style)'
+
+
 
 [time]
 disabled = false

@@ -46,6 +46,7 @@ output DP-2 resolution 2560x1440 scale 1 position 1920,0
 
 bindsym $mod+$right exec swaylock -e -f -C $HOME/.config/sway/swaylock/rose-pine -i $HOME/dotfiles/.wall.jpg --font maple
 
+bindsym $mod+Print exec IMG=~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png && grim -g "$(slurp)" $IMG && wl-copy < $IMG
 
 
 ### Key bindings
@@ -196,18 +197,25 @@ bar {
 bindsym $mod+d exec --no-startup-id rofi -show window
 bindsym $mod+x exec firefox
 bindsym $mod+p exec $HOME/dotfiles/.scripts/rofi/rofi_powermenu
-bindsym $mod+c exec exec deepin-calculator
-bindsym $mod+i exec --no-startup-id bash rofi-pass
+bindsym $mod+c exec exec gnome-calculator
+for_window [app_id="org.gnome.Calculator"] floating enable
+bindsym $mod+i exec --no-startup-id bash $HOME/dotfiles/.scripts/custom-rofi-pass
 
 #librewolf
 bindsym $mod+o exec librewolf
 
 #ranger
-bindsym $mod+n exec "nemo"
+bindsym $mod+n exec "caja"
+for_window [app_id="caja"] floating enable
 for_window [app_id="nemo"] floating enable
 
 ###Cusom-visual
 ### Gaps
+
+
+
+#Autostart
+exec_always autotiling
 
 
 
@@ -220,3 +228,7 @@ xwayland enable
 
 include /etc/sway/config.d/*
 
+input * {
+    xkb_layout us,si
+    xkb_options grp:alt_shift_toggle
+}
